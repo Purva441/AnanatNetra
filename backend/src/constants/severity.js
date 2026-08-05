@@ -1,4 +1,4 @@
-const SEVERITIES = ["Low", "Medium", "High", "Critical"];
+const SEVERITIES = ["Low", "Medium", "High", "Criticals"];
 
 module.exports = {
   SEVERITIES,
