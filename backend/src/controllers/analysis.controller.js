@@ -2,7 +2,7 @@ const analysisService = require("../services/analysis.service");
 const asyncHandler = require("../utils/asyncHandler");
 const { sendSuccess } = require("../utils/apiResponse");
 
-const analyzeFinding = asyncHandler(async (req, res) => {
+const analyzeFindings = asyncHandler(async (req, res) => {
   const analysis = await analysisService.createAnalysis(req.body);
 
   return sendSuccess(res, "Analysis completed successfully", analysis, 201);
@@ -15,6 +15,6 @@ const getAllHistory = asyncHandler(async (req, res) => {
 });
 
 module.exports = {
-  analyzeFinding,
+  analyzeFindings,
   getAllHistory,
 };
