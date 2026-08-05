@@ -8,7 +8,7 @@ const analyzeFinding = asyncHandler(async (req, res) => {
   return sendSuccess(res, "Analysis completed successfully", analysis, 201);
 });
 
-const getHistory = asyncHandler(async (req, res) => {
+const getAllHistory = asyncHandler(async (req, res) => {
   const history = await analysisService.getHistory();
 
   return sendSuccess(res, "Analysis history fetched successfully", history);
@@ -16,5 +16,5 @@ const getHistory = asyncHandler(async (req, res) => {
 
 module.exports = {
   analyzeFinding,
-  getHistory,
+  getAllHistory,
 };
